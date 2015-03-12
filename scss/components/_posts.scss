@@ -1,0 +1,29 @@
+$post-orange: $main-orange;
+$post-red: $main-red;
+
+.c-post {
+  margin: 1em;
+  padding: 1em;
+  position: relative;
+
+  background: white;
+  @include card(3);
+}
+  .c-post__image {
+    margin: 0;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%; width: 100%;
+
+      background:
+        linear-gradient(
+          to left,
+          rgba($post-orange, .8),
+          rgba($post-red, .8)
+        );
+    }
+  }
